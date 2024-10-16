@@ -13,8 +13,8 @@ const options = {
 };
 
 export const fetchFromAPI = async (url) => {
-    // console.log(`env ${API_KEY}`);
-    // console.log(`fet ching from api ${BASE_URL}/${url}, options: ${options.headers['x-rapidapi-key']}`);
+    console.log(`env ${API_KEY}`);
+    console.log(`fet ching from api ${BASE_URL}/${url}, options: ${options.headers['x-rapidapi-key']}, ${options.headers['x-rapidapi-host']}`);
     const { data } = await axios.get(`${BASE_URL}/${url}`, options)
     return data;
 }
